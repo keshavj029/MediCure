@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --primary: #2980B9;
+    --secondary: #6DD5FA;
+    --tertiary: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    background: linear-gradient(167deg, var(--primary), var(--secondary), var(--tertiary));
+    background-attachment: fixed; /* Ensures the gradient stays fixed even when scrolling */
+    min-height: 100vh; /* Makes sure the body takes up the full height of the viewport */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    display: block;
+    background: transparent; /* Make the header background transparent so the gradient from the body shows through */
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: right;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+nav {
+    float: left;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 52px;
+    position: relative;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.Welcome {
+    display: block;
+    font-family: 'Playfair Display';
+    font-weight: 10;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+    color: var(--tertiary); /* Adjust text color to ensure readability over the gradient */
+}
+
+.container1 {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px; /* Add some padding to give the content space from the edges */
+}
+/* Add this CSS to your style.css or within a <style> tag in your HTML */
+.msger {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999; /* Ensure the chatbot appears on top of other content */
+  }
+  
+  .msger-header {
+    background: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #007bff;
+  }
+  
+  .msger-chat {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .msger-inputarea {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f7f7f7;
+  }
+  
+  .msger-input {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .msger-send-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .msger-send-btn:hover {
+    background: #0056b3;
+  }
+  
+  .msg {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .left-msg .msg-img {
+    order: 1;
+  }
+  
+  .right-msg .msg-img {
+    order: 2;
+  }
+  
+  .msg-img {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .msg-bubble {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f1f1f1;
+  }
+  
+  .left-msg .msg-bubble {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .right-msg .msg-bubble {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  .msg-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .msg-info-name {
+    font-weight: bold;
+  }
+  
+  .msg-info-time {
+    font-size: 0.85em;
+    color: #aaa;
+  }
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* or the desired height */
+}
+
+.carousel {
+    width: fit-content; /* Adjust as needed */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+}
+
+.register-button {
+    background-color: #add8e6; /* Light blue */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.register-button:hover {
+    background-color: #00008b; /* Dark blue */
+}
+
+.sigma{
+    display: block;
+    font-family: 'Playfair Display';
+    font-weight: 10;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+}
